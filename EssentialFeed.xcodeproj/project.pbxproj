@@ -11,6 +11,8 @@
 		45B3C42D2961A791005B42E6 /* EssentialFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3C42C2961A791005B42E6 /* EssentialFeedTests.swift */; };
 		45B3C42E2961A791005B42E6 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 45B3C4222961A791005B42E6 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45B3C4382961A7DA005B42E6 /* RemoteFeedLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3C4372961A7DA005B42E6 /* RemoteFeedLoaderTest.swift */; };
+		45B3C43A2961C193005B42E6 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3C4392961C193005B42E6 /* FeedLoader.swift */; };
+		45B3C43D2961C2C0005B42E6 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3C43C2961C2C0005B42E6 /* FeedItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		45B3C4272961A791005B42E6 /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B3C42C2961A791005B42E6 /* EssentialFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedTests.swift; sourceTree = "<group>"; };
 		45B3C4372961A7DA005B42E6 /* RemoteFeedLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTest.swift; sourceTree = "<group>"; };
+		45B3C4392961C193005B42E6 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		45B3C43C2961C2C0005B42E6 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				45B3C4222961A791005B42E6 /* EssentialFeed.h */,
+				45B3C43B2961C199005B42E6 /* FeedFeature */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -83,6 +88,15 @@
 				45B3C4372961A7DA005B42E6 /* RemoteFeedLoaderTest.swift */,
 			);
 			path = EssentialFeedTests;
+			sourceTree = "<group>";
+		};
+		45B3C43B2961C199005B42E6 /* FeedFeature */ = {
+			isa = PBXGroup;
+			children = (
+				45B3C4392961C193005B42E6 /* FeedLoader.swift */,
+				45B3C43C2961C2C0005B42E6 /* FeedItem.swift */,
+			);
+			path = FeedFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +161,7 @@
 				TargetAttributes = {
 					45B3C41E2961A791005B42E6 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 					45B3C4262961A791005B42E6 = {
 						CreatedOnToolsVersion = 14.1;
@@ -194,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B3C43D2961C2C0005B42E6 /* FeedItem.swift in Sources */,
+				45B3C43A2961C193005B42E6 /* FeedLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +357,7 @@
 		45B3C4322961A791005B42E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -360,6 +378,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -368,6 +387,7 @@
 		45B3C4332961A791005B42E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -396,6 +416,7 @@
 		45B3C4352961A791005B42E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 97D8WZ992M;
@@ -412,6 +433,7 @@
 		45B3C4362961A791005B42E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 97D8WZ992M;
