@@ -5,7 +5,7 @@ name: githubCI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "NetworkingModule" ]
   pull_request:
     branches: [ "main" ]
 
@@ -16,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Test Start
-      run: xcodebuild clean test -project EssentialFeed.xcodeproj -scheme CI -destination 'platform=macOS, arch=x86_64, id=4203018E-580F-C1B5-9525-B745CECA79EB'CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+      run: xcodebuild clean test -project EssentialFeed.xcodeproj -scheme CI -destination "platform=macOS,arch=x86_64,id=4203018E-580F-C1B5-9525-B745CECA79EB" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
