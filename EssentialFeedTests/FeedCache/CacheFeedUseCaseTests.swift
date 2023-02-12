@@ -28,7 +28,7 @@ class FeedStore {
     }
 }
 
-class CacheFeedUseCaseTests {
+class CacheFeedUseCaseTests: XCTestCase {
     
     func testInitDoesNotDeleteCacheUponCreation() {
         let (_, store) = makeSUT()
@@ -46,9 +46,13 @@ class CacheFeedUseCaseTests {
     
     // MARK: - Helper
     
-    private func makeSUT() -> (sut: LocalFeedLoader, store: FeedStore) {
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: LocalFeedLoader, store: FeedStore) {
         let store = FeedStore()
         let sut = LocalFeedLoader(store: store)
+        
+        trackFromMemoryLeak(store, file: file, line: line)
+        trackFromMemoryLeak(sut, file: file, line: line)
+        
         return (sut, store)
     }
     
